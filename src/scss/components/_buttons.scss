@@ -1,10 +1,14 @@
 $base-color: #238ce2;
 $text-color: #ffffff;  
-$color-accent: #4d1bb1;
+$color-accent: #031aab;
 
 .button {
-    display: inline-block;       
-    padding: 10px 30px;          
+    margin: auto;
+    display: flex;   
+    justify-content: center;
+    align-items: center;    
+    padding: 15px 50px;    
+    width: fit-content;    
     background-color: $base-color;   
     border-radius: 9999px;       
     color: $text-color;   
@@ -16,3 +20,13 @@ $color-accent: #4d1bb1;
           }     
                    
   }
+
+  button {
+    outline: none; // Прибирає чорну обводку при фокусі
+    border: none; // Прибирає стандартну рамку
+    width: auto; 
+
+    &:focus {
+      outline: none;
+    }
+  } 

@@ -1,0 +1,63 @@
+$gray-background:  #ececec;
+
+.required{
+    color: #ff0000;
+    margin-left: 3px;     
+}
+
+.checkbox{
+    all: unset; /* Скидає всі стилі */
+    display: flex;
+    align-items: left;
+    width: fit-content; /* Ширина блоку залежить від вмісту */
+  }
+
+.registration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 0px 10px ;
+    padding: 30px 15% ;
+    background: $gray-background;
+  
+    &__info {
+      text-align: center;  
+      width: 50%;
+      padding: 15px;
+      
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 16px;
+        color: #666;
+      }
+    }
+  
+    &__form {
+      width: 45%;
+      padding: 20px;
+      border-radius: 10px;
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        
+        label {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+  
+        input {
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  
+  
