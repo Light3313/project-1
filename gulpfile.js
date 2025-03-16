@@ -1,23 +1,107 @@
-const gulp = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('autoprefixer');
+const uglify = require('gulp-uglify-es').default;
+const { deleteAsync } = require('del');
+const cssnano = require('cssnano'); 
 
-// Компіляція SCSS → CSS + автооновлення
-function compileStyles() {
-  return gulp.src('src/scss/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
+
+// Конфігурація проекту
+const config = {
+  paths: {
+    src: {
+      scss: ['src/scss/**/*.scss'], // Додавайте бібліотеки тут (scss/css) 'node_modules/swiper/swiper-bundle.css'
+      js: 'src/js/**/*.js',
+      libs: [], // Додавайте бібліотеки тут (js) 'node_modules/swiper/swiper-bundle.js'
+      html: 'src/*.html',
+      assets: 'src/assets/**/*' // Зображення, шрифти тощо
+    },
+    dist: {
+      base: 'dist/',
+      css: 'dist/css/',
+      js: 'dist/js/',
+      assets: 'dist/assets/'
+    }
+  },
+  browsersync: {
+    server: { baseDir: 'dist' },
+    port: 3000,
+    notify: false
+  },
+  autoprefixer: {
+    overrideBrowserslist: ['last 8 versions', '> 1%', 'IE 11']
+  }
+};
+
+// Очищення папки dist
+function clean() {
+  return deleteAsync([config.paths.dist.base + '**/*']); 
+}
+
+// Обробка стилів
+function styles() {
+  return src(config.paths.src.scss)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer(config.autoprefixer), cssnano()]))
+    .pipe(concat('main.min.css'))
+    .pipe(dest(config.paths.dist.css))
     .pipe(browserSync.stream());
 }
 
-// Запуск сервера з автооновленням
-function serve() {
-  browserSync.init({ server: './' });
-  gulp.watch('src/scss/**/*.scss', compileStyles);
-  gulp.watch('./*.html').on('change', browserSync.reload);
+// Обробка скриптів
+function scripts() {
+  return src([...config.paths.src.libs, config.paths.src.js])
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest(config.paths.dist.js))
+    .pipe(browserSync.stream());
 }
 
-exports.default = serve;
+// Копіювання HTML
+function html() {
+  return src(config.paths.src.html)
+    .pipe(dest(config.paths.dist.base))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
+// Копіювання ассетів
+function assets() {
+  return src(config.paths.src.assets, { encoding: false })
+    .pipe(dest(config.paths.dist.assets))
+    .pipe(browserSync.stream());
+}
+
+// Сервер та вотчер
+function serve() {
+  browserSync.init(config.browsersync);
+  
+  watch(config.paths.src.scss, styles);
+  watch(config.paths.src.js, scripts);
+  watch(config.paths.src.html, html);
+  watch(config.paths.src.assets, assets);
+}
+
+// Збірка проекту
+const build = series(
+  clean,
+  parallel(styles, scripts, html, assets)
+);
+
+// Запуск розробки
+const dev = series(
+  build,
+  serve
+);
+
+// Експорт задач
+exports.clean = clean;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.html = html;
+exports.assets = assets;
+exports.build = build;
+exports.dev = dev;
+exports.default = dev;

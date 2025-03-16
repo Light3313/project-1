@@ -1,0 +1,16 @@
+@use 'header';
+@use 'main';
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+
+@function rem($px, $base: 16px) {
+    @return ($px / $base) * 1rem;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  

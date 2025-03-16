@@ -1,0 +1,80 @@
+@use 'components/buttons';
+
+$color-white: #ffffff;
+$color-accent: #4d1bb1;
+$soft-black: #5d5d5d;
+
+.header {
+    background: $color-white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+  
+    &__logo {
+      img {
+        padding: 0.8rem;
+        height: 60px;
+        width: auto;
+      }
+    }
+  
+    &__menu {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      list-style: none;
+      padding: 0.8rem;
+      display: flex;
+      gap: 2rem;
+  
+      a {
+        color: $soft-black;
+        text-decoration: none;
+        transition: color 0.3s, box-shadow 0.3s;
+  
+        &:hover {
+          color: #000000;
+          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  
+    &__hamburger {
+      display: none;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+  
+  // Мобільна версія
+  @media (max-width: 768px) {
+    .header {
+      &__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: $color-white;
+        padding: 2rem;
+        
+        &.is-active {
+          display: block;
+        }
+      }
+  
+      &__hamburger {
+        display: block;
+      }
+    }
+  }
