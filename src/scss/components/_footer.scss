@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+footer {
+    padding: 30px;
+    text-align: center;
+    .copyright{
+        all: unset;
+        cursor: pointer;
+        color: $link-text-color;
+        &:hover{
+            color: $color-accent;
+        }
+    }
+    .privacy-policy{
+        color: $soft-black;
+    }
+}

@@ -13,9 +13,9 @@ const cssnano = require('cssnano');
 const config = {
   paths: {
     src: {
-      scss: ['src/scss/**/*.scss'], // Додавайте бібліотеки тут (scss/css) 'node_modules/swiper/swiper-bundle.css'
+      scss: ['src/scss/**/*.scss', 'node_modules/swiper/swiper-bundle.css'], // Додавайте бібліотеки тут (scss/css) 
       js: 'src/js/**/*.js',
-      libs: [], // Додавайте бібліотеки тут (js) 'node_modules/swiper/swiper-bundle.js'
+      libs: ['node_modules/swiper/swiper-bundle.js'], // Додавайте бібліотеки тут (js) 
       html: 'src/*.html',
       assets: 'src/assets/**/*' // Зображення, шрифти тощо
     },

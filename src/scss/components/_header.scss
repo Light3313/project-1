@@ -1,9 +1,5 @@
-@use 'components/buttons';
-
-$color-white: #ffffff;
-$color-accent: #4d1bb1;
-$soft-black: #5d5d5d;
-
+@use 'buttons';
+@use 'variables' as *;
 
 .header {
     background: $color-white;
@@ -14,7 +10,7 @@ $soft-black: #5d5d5d;
   
     &__container {
       margin: 0 auto; /* центрування */
-      padding: 0 15%; /* відступи зліва/справа */
+      padding: 0 $base-horizontal-padding; /* відступи зліва/справа */
       display: flex;
       justify-content: space-between; /* розподіл простору між лого і навігацією */
       align-items: center;
@@ -22,8 +18,9 @@ $soft-black: #5d5d5d;
   
     &__logo {
       img {
+        align-items: center;
         padding: 0.8rem;
-        height: 60px;
+        height: 70px;
         width: auto;
       }
     }

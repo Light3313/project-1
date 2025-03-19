@@ -1,4 +1,4 @@
-$gray-background:  #ececec;
+@use 'variables' as *;
 
 .required{
     color: #ff0000;
@@ -17,7 +17,7 @@ $gray-background:  #ececec;
     align-items: center;
     justify-content: space-between;
     margin: 100px 0px 10px ;
-    padding: 30px 15% ;
+    padding: 30px $base-horizontal-padding;
     background: $gray-background;
   
     &__info {
@@ -56,6 +56,19 @@ $gray-background:  #ececec;
           border: 1px solid #ccc;
           border-radius: 5px;
         }
+
+        img {
+          height: 0.5em;
+          width: auto;
+        }
+
+        .privacy-policy{
+          cursor: pointer;
+          color: $link-text-color;
+          &:hover{
+              color: $color-accent;
+          }
+      }
       }
     }
   }

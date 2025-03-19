@@ -31,7 +31,7 @@
         </div>
       </header>
 <main class="container">
-  <section class="registration">
+  <section class="registration"> <!-- registration form -->
     <div class="registration__info">
       <h2>Курси програмування у Луцьку</h2>
       <p> 
@@ -48,37 +48,177 @@
     <div class="registration__form">
       <h3>Зареєструватися на курси</h3>
       <form action="#" method="POST">
-        <label for="name">Ім'я<span class="required">*</span></label>
+        <label for="name">Ім'я <img src="assets/icons/required.png" alt="required"></label>
         <input type="text" id="name" name="name" placeholder="Ім'я" required>
     
-        <label for="surname">Прізвище<span class="required">*</span></label>
+        <label for="surname">Прізвище <img src="assets/icons/required.png" alt="required"></label>
         <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
      
-        <label for="interest">Мене більше цікавить<span class="required">*</span></label>
+        <label for="interest">Мене більше цікавить <img src="assets/icons/required.png" alt="required"></label>
         <input type="text" id="interest" name="interest" placeholder="developer or QA" required>
       
-        <label for="phone">Номер телефону<span class="required">*</span></label>
+        <label for="phone">Номер телефону <img src="assets/icons/required.png" alt="required"></label>
         <input type="tel" id="phone" name="phone" placeholder="+38 XXX XX XX XXX"  inputmode="numeric" required>
 
-        <label for="email">Email<span class="required">*</span></label>
+        <label for="email">Email <img src="assets/icons/required.png" alt="required"></label>
         <input type="email" id="email" name="email" placeholder="Email" required>
 
         <div class="checkbox">
-        <input type="checkbox" id="privacy" required >
-        <label for="privacy">
-          Я погоджуюсь з <a href="/privacy-policy" target="_blank">політикою конфіденційності</a><span class="required">*</span>
-        </label>
+          <input type="checkbox" id="privacy" required >
+          <label for="privacy">
+            Я погоджуюсь з <a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" class="privacy-policy">Політикою Конфіденційності </a><img src="assets/icons/required.png" alt="required">
+          </label>
       </div>
-
+      <br>
         <button type="submit" class="button">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
       </form>
     </div>
   </section>
-  
-  
+  <section> <!--brocken swiper-->
+    <h2 style="text-align: center;">Курс «Розробка сайтів»</h2>
+    <div class="baze__container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> 
+            <div class="swiper-content">        
+              <img src="assets/icons/course-icon-1.png" alt="course-icon-1" >
+              <h3 class="swiper-slide-title">
+                Розробка сайтів на WordPress 
+              </h3>
+              <p class="swiper-slide-text">
+                Курс склада€ться з коротких навчальних 
+                на яких ти основи WordPress, 
+                навчишся створювати сайти pi3HOT 
+                до iHTepHeT магазинјв. 
+                Bci знання за допомогою тестових 
+                заадань.
+              </p>
+            </div> 
+          </div>
+          <div class="swiper-slide">  
+            <div class="swiper-content">      
+              <img src="assets/icons/course-icon-2.png" alt="course-icon-2" >
+              <h3 class="swiper-slide-title">
+                Розробка сайтів на Drupal 8
+              </h3>
+              <p class="swiper-slide-text">
+                Для створення чудових сайтЈв на Drupal 8, 
+                цеглинка за цеглинкою, ти ПВнаЕ-Ш секрети 
+                основних та додаткових 
+                (Views, Rules, Panels, Devel, Paragraph та 
+                багатьох еших),
+              </p>
+            </div>  
+        </div>
+        <div class="swiper-slide">  
+          <div class="swiper-content">       
+            <img src="assets/icons/course-icon-3.png" alt="Company Logo" >
+            <h3 class="swiper-slide-title">
+              Ознайомлення з тестуванням  
+            </h3>
+            <p class="swiper-slide-text">
+              Ти д(зна€шся про забезпечення в 
+              контекстЈ моделей розробки ПЗ Також 
+              QA-cneL4jaJ1icT розкаже про види тестування 
+              регресивне, системне, 
+              тестування тоща).
+            </p>
+        </div> 
+      </div> 
+      <div class="swiper-slide">          
+        <div class="swiper-content">
+          <img src="assets/icons/required.png" alt="Company Logo" >
+          <h3 class="swiper-slide-title">
+            Ознайомлення з тестуванням  
+          </h3>
+          <p class="swiper-slide-text">
+            Ти д(зна€шся про забезпечення в 
+            контекстЈ моделей розробки ПЗ Також 
+            QA-cneL4jaJ1icT розкаже про види тестування 
+            регресивне, системне, 
+            тестування тоща).
+          </p>
+        </div>
+    </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section> <!-- info -->
+    <div class="baze__container info-block">
+      <div class="content-block">
+        <img src="assets/icons/statistic-icon-1.png" alt="statistic-icon-1" class="img-wide">
+        <div class="bigger-font-info">25</div>
+          <p>курсів організовано</p>
+      </div>
+      <div class="content-block">
+        <img src="assets/icons/statistic-icon-2.png" alt="statistic-icon-2" class="img-wide">
+        <div class="bigger-font-info">836</div>
+          <p>годин занять проведено</p>
+      </div>
+      <div class="content-block">
+        <img src="assets/icons/statistic-icon-3.png" alt="statistic-icon-3" class="img-wide">
+        <div class="bigger-font-info">500</div>
+          <p>студентів навчено</p>
+      </div>
+      <div class="content-block">
+        <img src="assets/icons/statistic-icon-4.png" alt="statistic-icon-4" class="img-wide">
+        <div class="bigger-font-info">120</div>
+          <p>випускників курсів працевлаштовано</p>
+      </div>
+    </div>
+  </section>
+  <section class="baze__container video-block"> <!-- video-block -->
+    <div class="container">
+       <h2 class="video-title">Відео</h2>
+       <p class="video-text ">
+          Lorem lpsum - це текст-”риба”, цо використовується в друкарстві та дизайні Lorem lpsum є, фактично, стандартною ”рибою” аж з XV ст. коли друкар взяв шрифтову гранку та склад на 3pa3kiB ”Риба” не тјльки пережила п'ять але й прижилася в електронному BepcTYBaHHi, залишаючись по CYTi незмјнною. Вона популяризувалась в 60-их роках минулого завдяки  виданню зразк\в шрифтЈв Letraset, якј мЈстили уривки з Lorem lpsum, i вдруге - нещодавно завдяки програмам комп'ютерного верстування на  кшталт Aldus Pagemaker, використовували рЈзнЈ версЈЈ' Lorem lpsum.
+        </p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/nhPiL4g972A?si=G2ffSjXrffB0TE6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>    
+    </div>
+  </section>
 </main>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.2977591887193!2d25.315233176603!3d50.71441487164373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sen!2sua!4v1742224681420!5m2!1sen!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+<section> <!-- contacts -->
+  <div class="baze__container contact-block">
+    <div class="content-block">
+      <a href="tel:+380673321755">
+        <img src="assets/icons/phone.png" alt="phone">
+        <div class="bigger-font-contact">Телефон</div>
+        <p>+38 067 332 17 55</p>
+      </a>
+    </div>
+    <div class="content-block">
+        <img src="assets/icons/e-mail.png" alt="e-mail">
+        <div class="bigger-font-contact">E-mail</div>
+        <p>office@t.volyn.ua</p>
+    </div>
+    <div class="content-block">
+        <img src="assets/icons/map-pinpoint.png" alt="map-pinpoint">
+        <div class="bigger-font-contact">Адреса</div>
+        <p>вул. Боженка 34г. Луцьк</p>
+    </div>
+    <div class="content-block">
+      <a href="https://www.facebook.com/oxitschool">
+        <img src="assets/icons/facebook-logo.png" alt="facebook-logo">
+        <div class="bigger-font-contact">Facebook</div>
+        <p>facebook.com/oxitschool</p>
+      </a>
+    </div>
+  </div>
+</section>
 <footer>
-
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Copyright" class="copyright"  target="blank">© Copyright 2018-2020 Internet Devels</a>
+  </p>
+  <p class="privacy-policy">
+    <a href="https://en.wikipedia.org/wiki/Privacy_policy">
+      Умови політики конфіденційності
+    </a>
+  </p>
 </footer>
 </body>
 </html>
