@@ -13,11 +13,13 @@ const cssnano = require('cssnano');
 const config = {
   paths: {
     src: {
-      scss: ['src/scss/**/*.scss', 'node_modules/swiper/swiper-bundle.css'], // Додавайте бібліотеки тут (scss/css) 
+      scss: [ 'src/scss/**/*.scss', 
+              'node_modules/swiper/swiper-bundle.css'], // Додавайте бібліотеки тут (scss/css) ,'node_modules/font-awesome/css/font-awesome.min.css'
       js: 'src/js/**/*.js',
       libs: ['node_modules/swiper/swiper-bundle.js'], // Додавайте бібліотеки тут (js) 
       html: 'src/*.html',
-      assets: 'src/assets/**/*' // Зображення, шрифти тощо
+      assets: [ 'src/assets/**/*'
+      ] // Зображення, шрифти тощо                'node_modules/font-awesome/fonts/*'
     },
     dist: {
       base: 'dist/',

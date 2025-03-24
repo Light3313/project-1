@@ -45,27 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    new Swiper('.swiper', {
-      slidesPerView: 3, // По замовчуванню 3 елементи
-      spaceBetween: 20,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        850: {
-          slidesPerView: 2, // При ширині <850px - 2 елементи
-        },
-        600: {
-          slidesPerView: 1, // При ширині <600px - 1 елемент
-        }
-      }
-    });
-  });
 
