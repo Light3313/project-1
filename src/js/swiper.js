@@ -7,16 +7,12 @@ window.addEventListener('DOMContentLoaded', () => {
       if (slides.length > 3 || window.innerWidth <= 850) {
         new Swiper('.mySwiper', {
           slidesPerView: '3',
-          centeredSlides: true,
+          centeredSlides: false,
           spaceBetween: 30,
           loop: true, // Loop тільки якщо слайдів >3
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
           },
           breakpoints: {
             850: { slidesPerView: 3 },

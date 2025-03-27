@@ -9,10 +9,10 @@
     z-index: 1000;
   
     &__container {
-      margin: 0 auto; /* центрування */
-      padding: 0 $base-horizontal-padding; /* відступи зліва/справа */
+      margin: 0 auto; 
+      padding: 0 $base-horizontal-padding; 
       display: flex;
-      justify-content: space-between; /* розподіл простору між лого і навігацією */
+      justify-content: space-between; 
       align-items: center;
     }
   
@@ -40,7 +40,7 @@
         transition: color 0.3s, box-shadow 0.3s;
   
         &:hover {
-          color: #000000;
+          color: $base-color-button;
           text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
       }

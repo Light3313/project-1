@@ -1,4 +1,13 @@
 @use 'variables' as *;
+
+:target {
+    scroll-margin-top: 85px; /* Висота хедера */
+  }
+  
+html {
+    scroll-behavior: smooth;
+  }
+  
 a{
     all: unset;
     cursor: pointer
@@ -7,23 +16,33 @@ a{
 iframe {
     border: none;
 }
+.blue-background-color {
+    background-color: $blue-background;
+}
 
 .baze__container {
-    padding: 0 $base-horizontal-padding;
+    max-width: 1220px;   /* Максимальна ширина контенту */
+    width: 100%;         /* Займає всю доступну ширину */
+    padding: 0 15px;     /* Відступи з боків */
+    margin: 0 auto;      /* Центрування блоку */
+    box-sizing: border-box; /* Включаємо padding в загальну ширину */
     margin-bottom: 0px;
   }
 
+.vertical_center {
+    display: flex; 
+    align-items: center;
+}
+
 .info-block {
-    background-color: $blue-background;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 38px $base-horizontal-padding;
+    padding: 38px 20px;
     
 }
 
 .contact-block {
-    background-color: $blue-background;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -31,6 +50,9 @@ iframe {
     padding-bottom: $base-verical-padding;
 }
 
+
+
+      
 .content-block {
     display: flex;
     flex-direction: column;

@@ -2,13 +2,14 @@
 
 .video-block{
     background-color: $gray-background;
-    padding: inherit $base-horizontal-padding;
     display: flex;
     justify-content: center;
     
     .container {
+        width: 100%;
         max-width: 1020px;
         padding-bottom: 60px;
+        margin: 0 auto;
     }
     
     .video-title {

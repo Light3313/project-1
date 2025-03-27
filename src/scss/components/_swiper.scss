@@ -2,8 +2,18 @@
   
 
 .mySwiper{
+
+  .swiper-pagination-bullet {
+    background-color: #7f7f7f; 
+   }
+
+  .swiper-pagination-bullet-active {
+      background-color: #383838;
+  }
+  
   .swiper-wrapper {
     margin-bottom: 30px;
+    width: 100vw;
 
 }
 .swiper {
@@ -31,6 +41,8 @@ h3 {
       }
 }
 }
+
+
 
 .swiper-slide img {
 height: 60px;

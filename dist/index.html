@@ -10,19 +10,19 @@
 
 <body>
     <script src="js/main.min.js"></script>
-    <header class="header">
-        <div class="container header__container">
+    <header class="header"> <!-- header -->
+        <div class="container header__container baze__container">
           <a href="/" class="header__logo">
             <img src="assets/img/logo_Oxit.png" alt="Company Logo" >
           </a>
           
           <nav class="header__nav" aria-label="Main navigation">
             <ul class="header__menu">
-              <li><a href="#about">Головна</a></li>
-              <li><a href="#services">Відгуки про курс</a></li>
-              <li><a href="#contact">Відео</a></li>
-              <li><a href="#contact">Ментори</a></li>
-              <li><a href="#contact"><div class="button">Подати заявку</div></a></li>
+              <li><a href="#main">Головна</a></li>
+              <li><a href="#reviews">Відгуки про курс</a></li>
+              <li><a href="#video">Відео</a></li>
+              <li><a href="#mentors">Ментори</a></li>
+              <li><a href="#main"><div class="button">Подати заявку</div></a></li>
             </ul>
           </nav>
       
@@ -31,51 +31,53 @@
           </button>
         </div>
       </header>
-<main class="container">
+<main id="main">
   <section class="registration"> <!-- registration form -->
-    <div class="registration__info">
-      <h2>Курси програмування у Луцьку</h2>
-      <p> 
-        Сфера IT розвиваеться максимально швидко. Зараз дуже 
-        популярно здобувати освіту, що повязана з IT. Існуе лише 
-        одна проблема - брак дійсно спеціалстів в 
-        Україні. Під час навчання ми отримуемо 
-        мало практики i ”живих”, реальних кейсів. ІT школа Oxit 
-        створила таку методику навчання, при якій за короткий 
-        час ви отримаете необхідні знання, щоб стати ІT спеціалстом.
-        Чекаємо вас на наих курсах з 
-        програмування в Луцьку. Старт наступного курсу З серпня.</p>
-    </div>
-    <div class="registration__form">
-      <h3>Зареєструватися на курси</h3>
-      <form action="#" method="POST">
-        <label for="name">Ім'я <img src="assets/icons/required.png" alt="required"></label>
-        <input type="text" id="name" name="name" placeholder="Ім'я" required>
-    
-        <label for="surname">Прізвище <img src="assets/icons/required.png" alt="required"></label>
-        <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
-     
-        <label for="interest">Мене більше цікавить <img src="assets/icons/required.png" alt="required"></label>
-        <input type="text" id="interest" name="interest" placeholder="developer or QA" required>
-      
-        <label for="phone">Номер телефону <img src="assets/icons/required.png" alt="required"></label>
-        <input type="tel" id="phone" name="phone" placeholder="+38 XXX XX XX XXX"  inputmode="numeric" required>
-
-        <label for="email">Email <img src="assets/icons/required.png" alt="required"></label>
-        <input type="email" id="email" name="email" placeholder="Email" required>
-
-        <div class="checkbox">
-          <input type="checkbox" id="privacy" required >
-          <label for="privacy">
-            Я погоджуюсь з <a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" class="privacy-policy">Політикою Конфіденційності </a><img src="assets/icons/required.png" alt="required">
-          </label>
+    <div class="baze__container vertical_center">
+      <div class="registration__info ">
+        <h2>Курси програмування у Луцьку</h2>
+        <p> 
+          Сфера IT розвиваеться максимально швидко. Зараз дуже 
+          популярно здобувати освіту, що повязана з IT. Існуе лише 
+          одна проблема - брак дійсно спеціалстів в 
+          Україні. Під час навчання ми отримуемо 
+          мало практики i ”живих”, реальних кейсів. ІT школа Oxit 
+          створила таку методику навчання, при якій за короткий 
+          час ви отримаете необхідні знання, щоб стати ІT спеціалстом.
+          Чекаємо вас на наих курсах з 
+          програмування в Луцьку. Старт наступного курсу З серпня.</p>
       </div>
-      <br>
-        <button type="submit" class="button">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
-      </form>
+      <div class="registration__form">
+        <h3>Зареєструватися на курси</h3>
+        <form action="#" method="POST">
+          <label for="name">Ім'я <img src="assets/icons/required.png" alt="required"></label>
+          <input type="text" id="name" name="name" placeholder="Ім'я" required>
+      
+          <label for="surname">Прізвище <img src="assets/icons/required.png" alt="required"></label>
+          <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
+      
+          <label for="interest">Мене більше цікавить <img src="assets/icons/required.png" alt="required"></label>
+          <input type="text" id="interest" name="interest" placeholder="developer or QA" required>
+        
+          <label for="phone">Номер телефону <img src="assets/icons/required.png" alt="required"></label>
+          <input type="tel" id="phone" name="phone" placeholder="+38 XXX XX XX XXX"  inputmode="numeric" required>
+
+          <label for="email">Email <img src="assets/icons/required.png" alt="required"></label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+
+          <div class="checkbox">
+            <input type="checkbox" id="privacy" required >
+            <label for="privacy">
+              Я погоджуюсь з <a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" class="privacy-policy">Політикою Конфіденційності </a><img src="assets/icons/required.png" alt="required">
+            </label>
+        </div>
+        <br>
+          <button type="submit" class="button">ЗАРЕЄСТРУВАТИСЯ ЗАРАЗ</button>
+        </form>
+      </div>
     </div>
   </section>
-  <section> <!--swiper-->
+  <section> <!-- courses -->
     <h2 style="text-align: center;">Курс «Розробка сайтів»</h2>
     <div class="baze__container">
       <div class="swiper mySwiper">
@@ -147,7 +149,8 @@
     </div>
   </section>
   <section> <!-- info -->
-    <div class="baze__container info-block">
+    <div class="blue-background-color">
+    <div class="info-block baze__container">
       <div class="content-block">
         <img src="assets/icons/statistic-icon-1.png" alt="statistic-icon-1" class="img-wide">
         <div class="bigger-font-info">25</div>
@@ -169,8 +172,9 @@
           <p>випускників курсів працевлаштовано</p>
       </div>
     </div>
+    </div>
   </section>
-  <section class="baze__container"> <!-- reviews -->
+  <section id="reviews"> <!-- reviews -->
     <div class="reviews">
       <h2>Що кажуть студенти наших курсів:</h2>
       <div class="swiper reviews-swiper">
@@ -219,21 +223,70 @@
       </div>
     </div>
   </section>
-  <section class="baze__container video-block"> <!-- video-block -->
-    <div class="container">
+  <section class="video-block" id="video"> <!-- video-block -->
+    <div class="baze__container">
        <h2 class="video-title">Відео</h2>
        <p class="video-text ">
           Lorem lpsum - це текст-”риба”, цо використовується в друкарстві та дизайні Lorem lpsum є, фактично, стандартною ”рибою” аж з XV ст. коли друкар взяв шрифтову гранку та склад на 3pa3kiB ”Риба” не тјльки пережила п'ять але й прижилася в електронному BepcTYBaHHi, залишаючись по CYTi незмјнною. Вона популяризувалась в 60-их роках минулого завдяки  виданню зразк\в шрифтЈв Letraset, якј мЈстили уривки з Lorem lpsum, i вдруге - нещодавно завдяки програмам комп'ютерного верстування на  кшталт Aldus Pagemaker, використовували рЈзнЈ версЈЈ' Lorem lpsum.
         </p>
+        <div class="container">
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/nhPiL4g972A?si=G2ffSjXrffB0TE6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </div>    
+    </div>
+  </section>
+  <section class="mentors baze__container" id="mentors"> <!-- mentors -->
+    <div class="swiper mentors-swiper">
+      <h2>Наші ментори</h2>
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="mentors-content-block">
+              <img src="assets/img/viktor.png" alt="viktor">
+              <div class="mentor-info">
+                <h3>Віктор</h3> 
+                  <div class="mentor-info-text">
+                    <p>МайбутнЈм неабияк пощастило — адже з ними дЈлитиметься i3 величезним досвјдом! Сам засновник i СЕО компанй lnternetDevels, ВЈктор Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
+                    <p> BikTopy Е про що розповЈсти. BiH знае все про створення та керування великими korurnaHimj/, ефективну проекти i багато iHLL070. При цьому BiH не скаже, що знае все — саморозвиток для нього не жодно хвилинл На книжкових BikTopa полицях — сотнЈ прочитаних книг про управлЈння i не</p>
+                    <p>А от vpif не стоять на полиц[ 60 ВЈктор BMiE впевнено йти до Тхнього недавно BiH передавав yciM з Ельбрусу — найвищо[ точки Европи. Буде нестримна, мов лавина, помножена на i досвЈд. ви таке пропустите? Записуйтесь уже зараз!</p>
+                  </div>
+              </div>
+           </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mentors-content-block">
+              <img src="assets/img/mark.png" alt="mark">
+              <div class="mentor-info">
+                <h3>Марк</h3> 
+                  <div class="mentor-info-text">
+                    <p>МайбутнЈм неабияк пощастило — адже з ними дЈлитиметься i3 величезним досвјдом! Сам засновник i СЕО компанй lnternetDevels, ВЈктор Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
+                    <p> BikTopy Е про що розповЈсти. BiH знае все про створення та керування великими korurnaHimj/, ефективну проекти i багато iHLL070. При цьому BiH не скаже, що знае все — саморозвиток для нього не жодно хвилинл На книжкових BikTopa полицях — сотнЈ прочитаних книг про управлЈння i не</p>
+                    <p>А от vpif не стоять на полиц[ 60 ВЈктор BMiE впевнено йти до Тхнього недавно BiH передавав yciM з Ельбрусу — найвищо[ точки Европи. Буде нестримна, мов лавина, помножена на i досвЈд. ви таке пропустите? Записуйтесь уже зараз!</p>
+                  </div>
+              </div>
+           </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mentors-content-block">
+              <img src="assets/img/vova.png" alt="vova">
+              <div class="mentor-info">
+                <h3>Вова</h3> 
+                  <div class="mentor-info-text">
+                    <p>МайбутнЈм неабияк пощастило — адже з ними дЈлитиметься i3 величезним досвјдом! Сам засновник i СЕО компанй lnternetDevels, ВЈктор Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
+                    <p> BikTopy Е про що розповЈсти. BiH знае все про створення та керування великими korurnaHimj/, ефективну проекти i багато iHLL070. При цьому BiH не скаже, що знае все — саморозвиток для нього не жодно хвилинл На книжкових BikTopa полицях — сотнЈ прочитаних книг про управлЈння i не</p>
+                    <p>А от vpif не стоять на полиц[ 60 ВЈктор BMiE впевнено йти до Тхнього недавно BiH передавав yciM з Ельбрусу — найвищо[ точки Европи. Буде нестримна, мов лавина, помножена на i досвЈд. ви таке пропустите? Записуйтесь уже зараз!</p>
+                  </div>
+              </div>
+           </div>
+          </div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 </main>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.2977591887193!2d25.315233176603!3d50.71441487164373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sen!2sua!4v1742224681420!5m2!1sen!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-<section> <!-- contacts -->
-  <div class="baze__container contact-block">
+<section class="blue-background-color"> <!-- contacts -->
+  <div class="contact-block baze__container">
     <div class="content-block">
       <a href="tel:+380673321755">
         <img src="assets/icons/phone.png" alt="phone">

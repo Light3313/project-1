@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.mentors {
+
+    margin-bottom: 3rem;
+
+    img {
+        height: 300px;
+        width: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    h3 {
+        color: $color-accent;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    h2{
+        text-align: center;
+        font-weight: 500;
+
+
+    }
+    .mentors-content-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .mentor-info {
+        display: inline-block;
+        width: 60%;
+        height: auto;
+        padding-left: 5rem;
+
+        &-text {
+            color: $soft-black;
+        }
+    }
+  .swiper-pagination-bullet {
+    background-color: #7f7f7f; 
+   }
+
+  .swiper-pagination-bullet-active {
+      background-color: #383838;
+  }
+}

@@ -18,8 +18,7 @@ const config = {
       js: 'src/js/**/*.js',
       libs: ['node_modules/swiper/swiper-bundle.js'], // Додавайте бібліотеки тут (js) 
       html: 'src/*.html',
-      assets: [ 'src/assets/**/*'
-      ] // Зображення, шрифти тощо                'node_modules/font-awesome/fonts/*'
+      assets: [ 'src/assets/**/*'] // Зображення, шрифти тощо                'node_modules/font-awesome/fonts/*'
     },
     dist: {
       base: 'dist/',
