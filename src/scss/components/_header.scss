@@ -10,10 +10,9 @@
   
     &__container {
       margin: 0 auto; 
-      padding: 0 $base-horizontal-padding; 
       display: flex;
-      justify-content: space-between; 
       align-items: center;
+      justify-content: space-between; 
     }
   
     &__logo {
@@ -48,31 +47,61 @@
   
     &__hamburger {
       display: none;
-      background: none;
-      border: 0;
       cursor: pointer;
+      background-color: #ffffff;
+      width: 40px;
+      padding: 5px 2px;
+      border-radius: 5px;
+      
+        .bar {
+          display: block;
+          width: 25px;
+          height: 2.2px;
+          margin: 5px auto;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          background-color: $base-color-button;
+        }
     }
   }
   
   // Мобільна версія
   @media (max-width: 768px) {
     .header {
-      &__menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: $color-white;
-        padding: 2rem;
-        
-        &.is-active {
-          display: block;
-        }
-      }
-  
       &__hamburger {
         display: block;
+        z-index: 9999;
+
+        &.active .bar{
+          top: 0;  
+          background-color: #ffffff;
+        }
+        &.active{
+          top: 0;  
+          background-color: $base-color-button;
+        }
+      }
+
+      &__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        display: flex;            
+        flex-direction: column;
+        padding: 2rem;
+        width: 100%;
+        text-align: center;
+        transition: top 0.4s ease-in-out;     
+        &.active {
+          top: 0;               
+        }
+      }
+      
+      .nav-item {
+        margin: 5px 0;
       }
     }
   }
+  
