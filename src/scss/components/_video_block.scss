@@ -15,8 +15,9 @@
     .video-title {
         margin: 0;
         padding: $base-verical-padding;
-        font-weight: 500;
+        font-weight: 400;
         text-align: center;
+        color: $title-color;
         font-size: 2em;
 
         &:not(:has(+ .video-text)) {
@@ -27,6 +28,7 @@
         margin: 0;
         margin-bottom: 25px;
         text-align: center;
+        color: $soft-black;
     }
     .video-wrapper {
         display: flex;

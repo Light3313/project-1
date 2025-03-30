@@ -7,7 +7,8 @@
     width: 100%;
     top: 0;
     z-index: 1000;
-  
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    
     &__container {
       margin: 0 auto; 
       display: flex;
@@ -18,7 +19,8 @@
     &__logo {
       img {
         align-items: center;
-        padding: 0.8rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.6rem;
         height: 70px;
         width: auto;
       }
@@ -48,7 +50,7 @@
     &__hamburger {
       display: none;
       cursor: pointer;
-      background-color: #ffffff;
+      background-color: $base-color-button;
       width: 40px;
       padding: 5px 2px;
       border-radius: 5px;
@@ -60,7 +62,7 @@
           margin: 5px auto;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: $base-color-button;
+          background-color: #ffffff;
         }
     }
   }
@@ -70,16 +72,19 @@
     .header {
       &__hamburger {
         display: block;
-        z-index: 9999;
+        z-index: 999;
 
         &.active .bar{
           top: 0;  
-          background-color: #ffffff;
         }
         &.active{
           top: 0;  
-          background-color: $base-color-button;
         }
+      }
+
+      &__logo {
+        display: block;
+        z-index: 999;
       }
 
       &__menu {
@@ -90,7 +95,7 @@
         background: #ffffff;
         display: flex;            
         flex-direction: column;
-        padding: 2rem;
+        padding: 2rem 0;
         width: 100%;
         text-align: center;
         transition: top 0.4s ease-in-out;     

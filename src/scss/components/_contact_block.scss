@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.contact-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: $base-verical-padding;
+    padding-bottom: $base-verical-padding;
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .content-block {
+        display: flex;
+        flex-direction: column;
+        color: $color-white;
+        text-align: center;
+        font-size: 18px;
+        justify-content: space-around;
+        align-items: center;
+        width: 17.5%;
+    
+        @media (max-width: 768px) {
+            justify-self: center;
+            width: 100%;
+        }
+        img {
+            height: 60px;
+            width: auto;
+            margin: 15px; 
+            
+        @media (max-width: 768px) {
+            height: 50px;
+        }
+        }
+        .bigger-font-contact {
+            font-weight: 700;
+            margin-top: 5px;
+            margin-bottom: -10px;
+        }
+        
+        p {
+            font-size: 1rem; 
+            font-weight: 300;
+        }
+    }
+}

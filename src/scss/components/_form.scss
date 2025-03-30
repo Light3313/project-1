@@ -1,10 +1,5 @@
 @use 'variables' as *;
 
-.required{
-    color: #ff0000;
-    margin-left: 3px;     
-}
-
 .checkbox{
     all: unset; /* Скидає всі стилі */
     display: flex;
@@ -12,35 +7,44 @@
     width: fit-content; /* Ширина блоку залежить від вмісту */
   }
 
+.vertical_center {
+    display: flex; 
+    align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
 .registration {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 100px 0px 10px ;
+    margin: 90px 0px 10px ;
     padding-top: 30px;
     padding-bottom: 30px;
     background: $gray-background;
-    &__container {
-    max-width: 1220px;   /* Максимальна ширина контенту */
-    width: 100%;         /* Займає всю доступну ширину */
-    padding: 0 15px;     /* Відступи з боків */
-    margin: 0 auto;      /* Центрування блоку */
-    box-sizing: border-box
-      }
-  
+
     &__info {
       text-align: center;  
+      justify-content: center !important;
       width: 50%;
       padding: 15px;
-      
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
       h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
       }
   
       p {
-        font-size: 16px;
+        font-size: 1rem;
+        margin: 0 auto;
         color: #666;
+        max-width: 80%
       }
     }
   
@@ -48,7 +52,19 @@
       width: 45%;
       padding: 20px;
       border-radius: 10px;
-  
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      h3 {
+        font-weight: 500;
+        
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+      }
+      
       form {
         display: flex;
         flex-direction: column;

@@ -1,0 +1,67 @@
+@use 'variables' as *;
+  
+.courses {
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: $title-color;
+  }
+
+  .mySwiper{
+
+    .swiper-pagination-bullet {
+      background-color: #b3b3b3; 
+     }
+  
+    .swiper-pagination-bullet-active {
+        background-color: #666666;
+    }
+    
+    .swiper-wrapper {
+      margin-bottom: 30px;
+      width: 100vw;
+  }
+  .swiper {
+  width: 100%;
+  height: 100%;
+  }
+  
+  .swiper-content {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    
+  h3 {
+    color: #7a7a7a;
+  
+      &::after {
+          content: "";
+          display: block;
+          width: 100;
+          height: 1.5px;
+          background: $blue-background;
+          margin: 5px auto auto;
+        }
+  }
+  }
+    .swiper-slide-text {
+      color: $soft-black;
+    }
+  
+    .swiper-slide img {
+      height: 60px;
+      width: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+

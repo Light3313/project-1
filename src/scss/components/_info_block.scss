@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+.info-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 38px 20px;
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+    }
+    .content-block {
+        display: flex;
+        flex-direction: column;
+        color: $color-white;
+        text-align: center;
+        font-size: 1rem;
+        align-items: center;
+        width: 30%;
+        
+        p {
+            font-weight: 300;
+        }
+    
+        @media (max-width: 768px) {
+            width: 100%;
+            
+        }
+        .img-wide{
+            height: 60px;
+            width: 80px;
+            margin: 15px;
+            margin-bottom: 0;
+        }
+        .bigger-font-info {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 1.8em;
+        } 
+    }
+}

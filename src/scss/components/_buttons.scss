@@ -1,23 +1,44 @@
 @use 'variables' as *;
 
-.button {
-    margin: auto;
-    display: flex;   
-    justify-content: center;
-    align-items: center;    
-    padding: 15px 50px;    
-    width: fit-content;    
-    background-color: $base-color-button;   
-    border-radius: 9999px;       
-    color: $text-color-button;   
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;  
-        &:hover {
-            background-color: $color-accent; 
-            transform: scale(1.05);
-          }     
-                   
-  }
+.button-header {
+  margin: auto;
+  display: flex;   
+  justify-content: center;
+  align-items: center;    
+  padding: 10px 25px;    
+  width: fit-content;    
+  background-color: $base-color-button;   
+  border-radius: 9999px;       
+  color: $text-color-button;   
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;  
+      &:hover {
+          background-color: $color-accent; 
+          transform: scale(1.05);
+        }  
+}
+
+.button-registration {
+  margin: auto;
+  display: flex;   
+  justify-content: center;
+  align-items: center;    
+  padding: 15px 80px;    
+  width: fit-content;    
+  background-color: $base-color-button;   
+  border-radius: 9999px;       
+  color: $text-color-button;   
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;  
+      &:hover {
+          background-color: $color-accent; 
+          transform: scale(1.05);
+        } 
+
+      @media (max-width: 768px) {
+        padding: 15px 60px;    
+      }                 
+}
 
   button {
     outline: none; // Прибирає чорну обводку при фокусі

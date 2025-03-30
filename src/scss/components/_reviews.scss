@@ -5,11 +5,11 @@
   position: relative;
 
   .swiper-pagination-bullet {
-    background-color: #7f7f7f; 
+    background-color: #b3b3b3; 
    }
 
   .swiper-pagination-bullet-active {
-      background-color: #383838;
+      background-color: #666666;
   }
   
   h2 {
@@ -17,7 +17,7 @@
     margin-bottom: -3rem;
     font-weight: 400;
     position: relative;
-    z-index: 2;
+    color: $title-color;
   }
 
   p {
@@ -53,9 +53,8 @@
   .quote-wrapper {
     position: relative;
     padding: 2rem 4rem;
-    width: auto;
     max-width: 1220px;   /* Максимальна ширина контенту */
-    width: 100%;         /* Займає всю доступну ширину */
+    width: 60%;         /* Займає всю доступну ширину */
     margin: 0 auto;      /* Центрування блоку */
     box-sizing: border-box; /* Включаємо padding в загальну ширину */
     margin-bottom: 0px;
@@ -74,7 +73,7 @@
 
     &::before {
       content: '\f10d';
-      top: 1rem;
+      top: 2rem;
       left: 3rem;
       transform: translate(-80%, 30%);
     }
@@ -103,14 +102,16 @@
   @media (max-width: 768px) {
     .quote-wrapper {
       padding: 2rem;
-      width: 90%;
+      width: 100%;
       
       &::before {
-        transform: translate(-50%, -30%);
+        transform: translate(-50%, 30%);
+        left: 1rem;
       }
       
       &::after {
-        transform: translate(50%, 30%);
+        transform: translate(50%, -30%);
+        right: 1rem;
       }
     }
     

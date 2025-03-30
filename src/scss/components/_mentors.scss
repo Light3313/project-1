@@ -2,32 +2,57 @@
 
 .mentors {
 
+    .swiper-pagination-bullet {
+        background-color: #b3b3b3; 
+       }
+    
+      .swiper-pagination-bullet-active {
+          background-color: #666666;
+      }
+      
     margin-bottom: 3rem;
 
     img {
-        height: 300px;
+        height: 300px;      /* Зберігає пропорції */
         width: auto;
-        display: block;
-        object-fit: cover;
+        object-fit: contain;
+        display: block;    
+
+        @media (max-width: 768px) {
+            height: 225px;
+        }
+        
+        @media (max-width: 340px) {
+            height: 140px;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 2rem;
+        color: $title-color;
     }
 
     h3 {
-        color: $color-accent;
-        font-weight: 600;
+        color: $blue-background;
+        font-weight: 700;
         margin-bottom: 2rem;
-    }
 
-    h2{
-        text-align: center;
-        font-weight: 500;
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }    
 
-
-    }
     .mentors-content-block {
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin-bottom: 1.5rem;
+       
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     .mentor-info {
@@ -36,15 +61,15 @@
         height: auto;
         padding-left: 5rem;
 
+        @media (max-width: 768px) {
+            width: auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
         &-text {
             color: $soft-black;
         }
     }
-  .swiper-pagination-bullet {
-    background-color: #7f7f7f; 
-   }
 
-  .swiper-pagination-bullet-active {
-      background-color: #383838;
-  }
 }
